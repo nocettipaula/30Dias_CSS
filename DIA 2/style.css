@@ -1,0 +1,59 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: black;
+}
+.loader {
+    height: 300px;
+    width: 300px;
+}
+.loader__text {
+    position: absolute;
+    font-family: Flex, sans-serif;
+    color: #000000;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+    animation: textColor 1s linear infinite;
+}
+.loader__ring {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 5px 1px #00FA9A;
+    animation: loading 1s linear infinite;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0 5px 1px #e1fa00;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 0 5px 1px #FF0000;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0 5px 1px #00FA9A;
+    }
+}
+@keyframes textColor {
+    0% {
+        color: #e1fa00;
+    }
+
+    50% {
+        color: #FF0000;
+    }
+
+    100% {
+        color: #00FA9A;
+    }
+}
