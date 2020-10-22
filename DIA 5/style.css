@@ -1,0 +1,47 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #000000;
+}
+.center 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pulse
+{
+    width: 100px;
+    height: 100px;
+    background: blue;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: verdana;
+    text-transform: uppercase;
+    animation: animate 3s linear infinite;
+    text-align: center;
+}
+@keyframes animate
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(224, 247, 16, 0.7), 0 0 0 0 rgba(227, 250, 22, 0.7);
+    }
+    40%
+    {
+        box-shadow: 0 0 0 50px rgba(52, 241, 14, 0), 0 0 0 0 rgba(10, 241, 41, 0.7);
+    }
+    80%
+    {
+        box-shadow: 0 0 0 50px rgba(7, 82, 245, 0), 0 0 0 30px rgba(7, 88, 240, 0);
+    }
+    100%
+    {
+        box-shadow: 0 0 0 0 rgba(250, 165, 6, 0), 0 0 0 30px rgba(248, 192, 6, 0);
+    }
+}
