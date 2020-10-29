@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #000000;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(17, 15, 15);
+}
+span {
+    font-family: Roboto;
+    text-transform: uppercase;
+    font-size: 100px;
+    position: relative;
+    color: rgb(202, 202, 202);
+}
+span::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    background-image: linear-gradient(to right, #f7081c, #c5790e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    overflow: hidden;
+    transition: all 1.3s;
+}
+span:hover::before { width: 100%; }
